@@ -9,7 +9,7 @@
 
 ## 📺 个人案例
 
-### mytv · 在线影视平台(独立全栈交付)
+### 案例一 · mytv · 在线影视平台(独立全栈交付)
 
 > 独立设计并开发的在线观影平台:聚合电影、剧集、综艺、动漫资源,支持分类检索、多线路播放与移动端响应式适配,已部署上线稳定运行。
 
@@ -18,6 +18,18 @@
 - 🛠 技术栈:Web 应用 · 全流程自研
 - ☁️ 部署环境:Cloudflare Pages
 - 📱 响应式:已适配桌面 / 移动端
+
+### 案例二 · Text2img · AI 文生图(Cloudflare Workers 边缘应用)
+
+> 基于 Cloudflare Workers AI 的免费文生图服务:内置 FLUX schnell 等 9 个模型,支持比例预设、批量生成与深浅色模式,无需服务器、全球边缘加速,开箱即用。
+
+- 🔗 在线访问:**https://pic.foxai.edu.kg/**
+- 💻 源码仓库:**https://github.com/LisaPullman/foxai-Text2img-Cloudflare-Workers**
+- 🛠 技术栈:Cloudflare Workers AI · Serverless 边缘部署
+- ☁️ 部署环境:Cloudflare Workers
+- 📱 响应式:已适配桌面 / 移动端
+
+> 版式说明:两个案例在桌面端(>900px)交错排布——案例一媒体在左,案例二(`.case.flip`)媒体在右;≤900px 统一恢复为「上图下文」单列。
 
 ---
 
@@ -48,7 +60,8 @@ site/
     ├── board-landscape.png    # 品牌总览图(横版 / 桌面端)
     ├── board-portrait.png     # 品牌总览图(竖版 / 移动端)
     ├── id-card.png            # GEEK ID 2049 证件卡
-    └── case-mytv.png          # mytv 项目封面(源图为 电影电视.png)
+    ├── case-mytv.png          # mytv 项目封面(源图为 电影电视.png)
+    └── case-flux.png          # Text2img 项目封面(源图为 FLUX schnell.png)
 ```
 
 ---

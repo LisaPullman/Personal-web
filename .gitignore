@@ -24,12 +24,14 @@ m3-*.jpeg
 
 # 原始素材(已在 site/assets/ 中以小写 / 重命名版本存在)
 # site/index.html 与 README.md 引用的资源名:
-#   - 电影电视.png  -> site/assets/case-mytv.png
-#   - 证件.png      -> site/assets/id-card.png
-#   - 横.png        -> site/assets/board-landscape.png
-#   - 纵.png        -> site/assets/board-portrait.png
+#   - 电影电视.png      -> site/assets/case-mytv.png
+#   - FLUX schnell.png  -> site/assets/case-flux.png
+#   - 证件.png          -> site/assets/id-card.png
+#   - 横.png            -> site/assets/board-landscape.png
+#   - 纵.png            -> site/assets/board-portrait.png
 # 因此根目录的同名原始 PNG 全部忽略,避免与 site/ 内副本冲突
 电影电视.png
+FLUX schnell.png
 证件.png
 起飞模拟飞行器海报.png
 横.png

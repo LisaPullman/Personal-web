@@ -295,6 +295,13 @@
   .case-meta b { color: var(--ink-2); font-weight: 500; }
   .case-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: auto; padding-top: 28px; }
   .case-links .btn { padding: 11px 20px; font-size: 14px; }
+  .case + .case { margin-top: 26px; }
+  /* 案例二(.flip):桌面端媒体靠右、正文靠左,与案例一交错形成节奏;
+     ≤900px 时下面的断点会把两例都恢复为「上图下文」单列,flip 不生效 */
+  @media (min-width: 901px) {
+    .case.flip { grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); }
+    .case.flip .case-media { order: 2; border-right: none; border-left: 1px solid var(--line); }
+  }
   @media (max-width: 900px) {
     .case { grid-template-columns: 1fr; }
     .case-media { border-right: none; border-bottom: 1px solid var(--line); aspect-ratio: 16 / 9; }
@@ -583,6 +590,29 @@
           <div class="case-links">
             <a class="btn btn-primary" href="https://tv.19900830.xyz" target="_blank" rel="noopener">访问项目 ↗</a>
             <a class="btn btn-ghost" href="https://github.com/LisaPullman/mytv" target="_blank" rel="noopener">GitHub 源码 ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="case flip reveal" style="--d:.08s">
+        <a class="case-media" href="https://pic.foxai.edu.kg/" target="_blank" rel="noopener" aria-label="访问 Text2img AI 文生图服务(新窗口)">
+          <img src="assets/case-flux.png" alt="FLUX schnell 像素风横幅 · Text2img AI 文生图服务封面" width="1400" height="800" loading="lazy" />
+        </a>
+        <div class="case-body">
+          <h3>Text2img · AI 文生图 <span class="en">AI Text-to-Image</span></h3>
+          <p class="sub">Cloudflare Workers 边缘文生图 · 免费开源</p>
+          <p class="body">基于 Cloudflare Workers AI 的免费文生图服务:内置 FLUX schnell 等 9 个模型,支持比例预设、批量生成与深浅色模式,无需服务器、全球边缘加速,开箱即用。</p>
+          <ul class="chips">
+            <li>FLUX 模型</li><li>比例预设</li><li>批量生成</li><li>深浅色模式</li>
+          </ul>
+          <div class="case-meta">
+            <span>类型 · <b>AI 应用</b></span>
+            <span>部署 · <b>Cloudflare Workers</b></span>
+            <span>状态 · <b>在线</b></span>
+          </div>
+          <div class="case-links">
+            <a class="btn btn-primary" href="https://pic.foxai.edu.kg/" target="_blank" rel="noopener">访问项目 ↗</a>
+            <a class="btn btn-ghost" href="https://github.com/LisaPullman/foxai-Text2img-Cloudflare-Workers" target="_blank" rel="noopener">GitHub 源码 ↗</a>
           </div>
         </div>
       </article>

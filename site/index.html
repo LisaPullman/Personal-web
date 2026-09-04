@@ -296,8 +296,8 @@
   .case-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: auto; padding-top: 28px; }
   .case-links .btn { padding: 11px 20px; font-size: 14px; }
   .case + .case { margin-top: 26px; }
-  /* 案例二(.flip):桌面端媒体靠右、正文靠左,与案例一交错形成节奏;
-     ≤900px 时下面的断点会把两例都恢复为「上图下文」单列,flip 不生效 */
+  /* 偶数案例(.flip):桌面端媒体靠右、正文靠左,与相邻案例交错形成节奏;
+     ≤900px 时下面的断点会把所有案例恢复为「上图下文」单列,flip 不生效 */
   @media (min-width: 901px) {
     .case.flip { grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); }
     .case.flip .case-media { order: 2; border-right: none; border-left: 1px solid var(--line); }
@@ -474,7 +474,10 @@
     </div>
     </div>
     <figure class="hero-card rise" style="--d:.35s">
-      <img src="assets/id-card.png" alt="foxai 证件卡:GEEK ID 2049 · DEV_EXPLORER · Software Engineer · Systems / AI / Cloud" width="1254" height="1254" fetchpriority="high" />
+      <picture>
+        <source type="image/webp" srcset="assets/id-card.webp" />
+        <img src="assets/id-card.png" alt="foxai 证件卡:GEEK ID 2049 · DEV_EXPLORER · Software Engineer · Systems / AI / Cloud" width="1254" height="1254" fetchpriority="high" />
+      </picture>
       <figcaption>GEEK ID 2049 · DEV_EXPLORER</figcaption>
     </figure>
   </div>
@@ -573,7 +576,10 @@
       </div>
       <article class="case reveal">
         <a class="case-media" href="https://tv.19900830.xyz" target="_blank" rel="noopener" aria-label="访问 mytv 在线影视平台(新窗口)">
-          <img src="assets/case-mytv.png" alt="mytv 在线影视平台界面预览:分类导航、影片列表与在线播放" width="1672" height="941" loading="lazy" />
+          <picture>
+            <source type="image/webp" srcset="assets/case-mytv.webp" />
+            <img src="assets/case-mytv.png" alt="mytv 在线影视平台界面预览:分类导航、影片列表与在线播放" width="1672" height="941" loading="lazy" />
+          </picture>
         </a>
         <div class="case-body">
           <h3>mytv · 在线影视 <span class="en">Online Cinema</span></h3>
@@ -596,7 +602,10 @@
 
       <article class="case flip reveal" style="--d:.08s">
         <a class="case-media" href="https://pic.foxai.edu.kg/" target="_blank" rel="noopener" aria-label="访问 Text2img AI 文生图服务(新窗口)">
-          <img src="assets/case-flux.png" alt="FLUX schnell 像素风横幅 · Text2img AI 文生图服务封面" width="1400" height="800" loading="lazy" />
+          <picture>
+            <source type="image/webp" srcset="assets/case-flux.webp" />
+            <img src="assets/case-flux.png" alt="FLUX schnell 像素风横幅 · Text2img AI 文生图服务封面" width="1400" height="800" loading="lazy" />
+          </picture>
         </a>
         <div class="case-body">
           <h3>Text2img · AI 文生图 <span class="en">AI Text-to-Image</span></h3>
@@ -613,6 +622,32 @@
           <div class="case-links">
             <a class="btn btn-primary" href="https://pic.foxai.edu.kg/" target="_blank" rel="noopener">访问项目 ↗</a>
             <a class="btn btn-ghost" href="https://github.com/LisaPullman/foxai-Text2img-Cloudflare-Workers" target="_blank" rel="noopener">GitHub 源码 ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="case reveal">
+        <a class="case-media" href="https://tts.qifei2035.eu.cc/" target="_blank" rel="noopener" aria-label="访问 EdgeTTS 语音合成服务(新窗口)">
+          <picture>
+            <source type="image/webp" srcset="assets/case-edgetts.webp" />
+            <img src="assets/case-edgetts.png" alt="Edge TTS 低多边形人脸插画横幅 · 语音合成服务封面" width="1672" height="941" loading="lazy" />
+          </picture>
+        </a>
+        <div class="case-body">
+          <h3>EdgeTTS · 语音合成 <span class="en">AI Text-to-Speech</span></h3>
+          <p class="sub">Cloudflare Workers 边缘语音合成 · OpenAI 接口兼容</p>
+          <p class="body">基于 Cloudflare Workers 的文本转语音服务:将微软 Edge TTS 封装为 OpenAI 兼容接口,支持流式播放、多音色、语速音调调节与文本清理,内置 Web UI,零依赖部署。</p>
+          <ul class="chips">
+            <li>OpenAI 兼容</li><li>多音色</li><li>流式播放</li><li>文本清理</li>
+          </ul>
+          <div class="case-meta">
+            <span>类型 · <b>API 服务</b></span>
+            <span>部署 · <b>Cloudflare Workers</b></span>
+            <span>状态 · <b>在线</b></span>
+          </div>
+          <div class="case-links">
+            <a class="btn btn-primary" href="https://tts.qifei2035.eu.cc/" target="_blank" rel="noopener">访问项目 ↗</a>
+            <a class="btn btn-ghost" href="https://github.com/LisaPullman/foxai-edgetts-cloudflare-workers-webui" target="_blank" rel="noopener">GitHub 源码 ↗</a>
           </div>
         </div>
       </article>
@@ -658,7 +693,9 @@
       <figure class="reveal">
         <div class="board-frame">
           <picture>
+            <source media="(max-width: 720px)" type="image/webp" srcset="assets/board-portrait.webp" width="941" height="1672" />
             <source media="(max-width: 720px)" srcset="assets/board-portrait.png" width="941" height="1672" />
+            <source type="image/webp" srcset="assets/board-landscape.webp" width="1672" height="941" />
             <img src="assets/board-landscape.png" alt="foxai 品牌总览图:四大业务、视觉规范与应用场景" width="1672" height="941" />
           </picture>
         </div>
